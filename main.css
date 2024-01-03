@@ -21,3 +21,17 @@ body {
     --line: #E8E9EC;
 }
 /* [ END ] Main Rules */
+
+/* [ START ] Background Style Section */
+.bg-pattern-top,
+.bg-pattern-bottom {
+    position: absolute;
+    z-index: -1;
+}
+.bg-pattern-top {
+    align-self: flex-start;
+}
+.bg-pattern-bottom {
+    align-self: flex-end;
+}
+/* [ END ] Background Style Section */
