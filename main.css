@@ -13,6 +13,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(./svgs/bg-pattern-top.svg), url(./svgs/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 52vw bottom 35vh, left 50vw top 46vh;
 }
 :root {
     --dark-navy: #2E3349;
@@ -22,22 +25,9 @@ body {
 }
 /* [ END ] Main Rules */
 
-/* [ START ] Background Style Section */
-.bg-pattern-top,
-.bg-pattern-bottom {
-    position: absolute;
-    z-index: -1;
-}
-.bg-pattern-top {
-    align-self: flex-start;
-}
-.bg-pattern-bottom {
-    align-self: flex-end;
-}
-/* [ END ] Background Style Section */
-
 /* [ START ] Main Box Style Section */
 main {
+    /* width: 326px; */
     display: flex;
     flex-direction: column;
     background-color: var(--white);
@@ -45,21 +35,27 @@ main {
     box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.50);
     text-align: center;
 }
-main > img {
-    border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+@media screen and ( max-width: 768px ) {
+    
 }
-main .profile-image {
-    width: 6rem;
-    height: 6rem;
-    border: 0.3125rem solid var(--white);
-    border-radius: 50%;
+main .bg-pattern-card {
     margin-bottom: 1.5rem;
-    align-self: center;
-    transform: translateY(-50%);
 }
-main .profile-image img {
+main .bg-pattern-card  img {
+    display: block;
+}
+main .bg-pattern-card img:first-of-type {
+    border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+    max-width: 100%;
+}
+main .bg-pattern-card .avatar {
+    width: 6rem;
     border-radius: 50%;
-    width: 100%;
+    border: 5px solid #ffffff;
+    position: relative;
+    margin-top: -48px;
+    z-index: 2;
+    margin: -48px auto 0;
 }
 main h1 {
     color: var(--dark-navy);
