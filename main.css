@@ -1,99 +1,105 @@
 /* [ START ] Main Rules */
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-    background-color: #19A1AE;
-    min-height: 100dvh;
-    font-family: 'Kumbh Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./svgs/bg-pattern-top.svg), url(./svgs/bg-pattern-bottom.svg);
-    background-repeat: no-repeat;
-    background-position: right 52vw bottom 35vh, left 50vw top 46vh;
+	background-color: #19a1ae;
+	min-height: 100dvh;
+	font-family: 'Kumbh Sans', sans-serif;
+	line-height: 1.24;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url(./svgs/bg-pattern-top.svg),
+		url(./svgs/bg-pattern-bottom.svg);
+	background-repeat: no-repeat;
+	background-position: right 52vw bottom 35vh, left 48vw top 52vh;
 }
 :root {
-    --dark-navy: #2E3349;
-    --grey: #6B7082;
-    --white: #FFF;
-    --line: #E8E9EC;
+	--dark-navy: #2e3349;
+	--grey: #6b7082;
+	--white: #fff;
+	--line: #e8e9ec;
+}
+.sr__seo {
+	width: 0;
+	overflow: hidden;
+	position: absolute;
 }
 /* [ END ] Main Rules */
 
 /* [ START ] Main Box Style Section */
 main {
-    /* width: 326px; */
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    border-radius: 0.9375rem;
-    box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.50);
-    text-align: center;
+	max-width: 21.875rem;
+	background-color: var(--white);
+	border-radius: 0.9375rem;
+	box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
+	text-align: center;
+	overflow: hidden;
+	padding-bottom: 1.6875rem;
 }
-@media screen and ( max-width: 768px ) {
-    
+@media screen and (max-width: 375px) {
+	main {
+		max-width: 20.313rem;
+	}
 }
-main .bg-pattern-card {
-    margin-bottom: 1.5rem;
+main article header {
+	margin-bottom: 1.2rem;
 }
-main .bg-pattern-card  img {
-    display: block;
+main article header img {
+	display: block;
 }
-main .bg-pattern-card img:first-of-type {
-    border-radius: 0.9375rem 0.9375rem 0rem 0rem;
-    max-width: 100%;
+main article header img:first-of-type {
+	max-width: 100%;
 }
-main .bg-pattern-card .avatar {
-    width: 6rem;
-    border-radius: 50%;
-    border: 5px solid #ffffff;
-    position: relative;
-    margin-top: -48px;
-    z-index: 2;
-    margin: -48px auto 0;
+main article header img:last-of-type {
+	width: 6rem;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	border: 5px solid #ffffff;
+	position: relative;
+	box-sizing: content-box;
+	z-index: 2;
+	margin: -3.3rem auto 0;
 }
-main h1 {
-    color: var(--dark-navy);
-    font-size: 1.125rem;
-    font-weight: 700;
-    margin-bottom: 0.8125rem;
+main article h2 {
+	color: var(--dark-navy);
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin-bottom: 0.7222222em;
 }
-main h1 span {
-    color: var(--grey);
-    font-weight: 400;
-    margin-left: 3px;
+main article h2 span {
+	color: var(--grey);
+	font-weight: 400;
+	margin-left: 0.53125em;
 }
-main p {
-    color: var(--grey);
-    font-size: 0.875rem;
-    margin-bottom: 1.75rem;
+main article p {
+	color: var(--grey);
+	font-size: 0.875rem;
 }
-main .line {
-    background-color: var(--line);
-    height: 0.0625rem;
-    margin-bottom: 1.5rem;
+main footer {
+	margin-top: 1.688rem;
+	padding-top: 1.438rem;
+	border-top: 0.0625rem solid var(--line);
 }
-main ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    column-gap: 2.875rem;
-    margin-bottom: 1.6875rem;
+main article footer ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	column-gap: 2.875rem;
 }
-main ul li h6 {
-    color: var(--dark-navy);
-    font-size: 1.125rem;
-    font-weight: 700;
+main article footer ul li h3 {
+	color: var(--dark-navy);
+	font-size: 1.125rem;
+	font-weight: 700;
 }
-main ul li span {
-    color: var(--grey);
-    font-size: 0.625rem;
-    font-weight: 400;
-    letter-spacing: 0.09375rem;
+main article footer ul li span {
+	color: var(--grey);
+	font-size: 0.625rem;
+	font-weight: 400;
+	letter-spacing: 0.15em;
 }
 /* [ END ] Main Box Style Section */
