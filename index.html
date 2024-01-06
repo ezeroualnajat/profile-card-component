@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
-    <title>Profile Card</title>
-</head>
-<body>
-    <main>
-        <div class="bg-pattern-card">
-            <img src="./svgs/bg-pattern-card.svg" alt="Bg Pattern Card">
-            <img class="avatar" src="./images/image-victor.jpg" alt="Image Victor">
-        </div>
-        <h1>
-            Victor Crest
-            <span>26</span>
-        </h1>
-        <p>London</p>
-        <div class="line"></div>
-        <ul>
-            <li>
-                <h6>80K</h6>
-                <span>Followers</span>
-            </li>
-            <li>
-                <h6>803K</h6>
-                <span>Likes</span>
-            </li>
-            <li>
-                <h6>1.4K</h6>
-                <span>Photos</span>
-            </li>
-        </ul>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./main.css" />
+		<link
+			rel="shortcut icon"
+			href="./images/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<title>Profile Card</title>
+	</head>
+	<body>
+		<main>
+			<h1 class="sr__seo">Profile card component</h1>
+			<article>
+				<header>
+					<img
+						src="./svgs/bg-pattern-card.svg"
+						alt="pattern background"
+						aria-hidden="true"
+					/>
+					<img
+						srcset="
+							./images/image-victor.jpg 1x,
+							./images/image-victor.jpg 2x
+						"
+						alt="Victor Crest"
+					/>
+				</header>
+				<h2>
+					Victor Crest
+					<span>26</span>
+				</h2>
+				<p>London</p>
+				<footer>
+					<ul>
+						<li>
+							<h3>80K</h3>
+							<span>Followers</span>
+						</li>
+						<li>
+							<h3>803K</h3>
+							<span>Likes</span>
+						</li>
+						<li>
+							<h3>1.4K</h3>
+							<span>Photos</span>
+						</li>
+					</ul>
+				</footer>
+			</article>
+		</main>
+	</body>
 </html>
